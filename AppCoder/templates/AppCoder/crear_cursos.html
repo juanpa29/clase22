@@ -1,0 +1,19 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block titulo %}
+Formulario para crear cursos
+{% endblock %}
+
+{% block formulario %}
+
+<form action="/AC/crearCurso/" method="POST"> {% csrf_token %}
+
+    <p> Nombre:  <input type="text" name="nombre" > </p>
+    <p> Comisión:  <input type="email" name="comision" > </p>
+
+    <input type="submit" value="Guardar">
+
+</form>
+
+{% endblock  %}
+

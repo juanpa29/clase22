@@ -1,0 +1,23 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block titulo %}
+Acá veremos los profesores.
+<a class="btn btn-primary" href="{% url 'CrearProfes' %}">Crear Profesor</a>
+
+{% endblock %}
+
+{% block formulario %}
+
+<ol>
+    {% for profe in profes %}
+
+        <li>
+            Nombre: {{profe.nombre}} ---- Apellido: {{profe.apellido}} ---- Email: {{profe.email}}
+        </li>
+        <a class="btn btn-primary" href="{% url 'BorrarProfe' profe.nombre %}">Borrar Profesor</a>
+
+    {% endfor %}
+    </ol>
+
+
+{% endblock  %}

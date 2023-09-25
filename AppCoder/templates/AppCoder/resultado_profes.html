@@ -1,0 +1,32 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block titulo %}
+Resultado de la búsqueda de Profesores
+{% endblock %}
+
+{% block formulario %}
+
+    {% if res %}
+
+    <h3>Los resultados son: </h3>
+
+    <ol>
+    {% for profe in res %}
+
+        <li>
+            Nombre: {{profe.nombre}} ---- Apellido: {{profe.apellido}} ---- Email: {{profe.email}}
+        </li>
+
+    {% endfor %}
+    </ol>
+
+    {% else %}
+
+    <h3>No hay resultados que coincidan con tu búsqueda!!!</h3>
+
+    {% endif %}
+
+
+
+{% endblock  %}
+

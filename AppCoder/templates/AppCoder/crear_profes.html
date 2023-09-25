@@ -1,0 +1,21 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block titulo %}
+Formulario para crear profes
+{% endblock %}
+
+{% block formulario %}
+
+<form action="" method="POST"> {% csrf_token %}
+
+    <table>
+        {{ form.as_table }}
+    </table>
+    
+    <input type="submit" value="Guardar">
+
+</form>
+
+
+{% endblock  %}
+

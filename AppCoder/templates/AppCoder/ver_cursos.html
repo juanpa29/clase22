@@ -1,0 +1,20 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block titulo %}
+Acá veremos los cursos!
+{% endblock %}
+
+{% block formulario %}
+
+<ol>
+    {% for curso in cursos %}
+
+        <li>
+            Nombre: {{curso.nombre}} ---- Comision: {{curso.comision}} 
+        </li>
+
+    {% endfor %}
+    </ol>
+
+
+{% endblock  %}

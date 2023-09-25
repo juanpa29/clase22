@@ -1,0 +1,18 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block titulo %}
+Formulario buscar profes.
+{% endblock %}
+
+{% block formulario %}
+
+<form action="/AC/resu_profe/" method="GET">
+    
+    <p> Apellido:  <input type="text" name="apellido" > </p>
+
+    <input type="submit" value="Buscar">
+
+</form>
+
+{% endblock  %}
+
