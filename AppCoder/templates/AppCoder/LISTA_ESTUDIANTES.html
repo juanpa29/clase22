@@ -1,0 +1,26 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block titulo %}
+Acá veremos los estudiantes.
+<a class="btn btn-primary" href="{% url 'Crear Estudiantes' %}">Crear Estudiante</a>
+
+{% endblock %}
+
+{% block formulario %}
+
+<ol>
+    {% for e in object_list %}
+
+        <li>
+            Nombre: {{e.nombre}}
+        </li>
+        <a class="btn btn-primary" href="{% url 'Detalle Estudiantes' e.id %}">Ver Detalles</a>
+        <a class="btn btn-primary" href="{% url 'Actualizar Estudiantes' e.id %}">Editar Estudiante</a>
+        <a class="btn btn-primary" href="{% url 'Borrar Estudiantes' e.id %}">Borrar Estudiante</a>
+
+
+    {% endfor %}
+    </ol>
+
+
+{% endblock  %}

@@ -1,0 +1,18 @@
+{% extends "AppCoder/padre.html" %}
+
+{% block titulo %}
+Acá veremos el detalle del estudiante.
+
+{% endblock %}
+
+{% block formulario %}
+
+<p>Nombre: {{object.nombre}}</p>
+<p>Apellido: {{object.apellido}}</p>
+<p>Email: {{object.email}}</p>
+<p>ID: {{object.id}}</p>
+
+<a class="btn btn-primary" href="{% url 'Ver Estudiantes' %}">Regresar</a>
+
+
+{% endblock  %}
